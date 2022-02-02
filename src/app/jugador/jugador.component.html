@@ -1,0 +1,41 @@
+<div *ngIf="jugador != undefined">
+	<h2>Editar Jugador {{jugador.nombre | uppercase}}</h2>
+	<table>
+		<tr>
+			<th>Nombre:</th>
+			<th><input [(ngModel)] ="jugador.nombre" placeholder="{{jugador.nombre}}" /></th>
+		</tr>
+		<tr>
+			<th>Partidos Jugados:</th>
+			<th><input [(ngModel)] = "jugador.partidosJugados" placeholder="{{jugador.partidosJugados}}" /></th>
+		</tr>
+		<tr>
+			<th>Minutos Jugados:</th>
+			<th><input [(ngModel)] = "jugador.minutosJugados" placeholder="{{jugador.minutosJugados}}" /></th>
+		</tr>
+		<tr>
+			<th>Goles Encajados:</th>
+			<th><input [(ngModel)] ="jugador.golesEncajados" placeholder="{{jugador.golesEncajados}}" /></th>
+		</tr>
+		<tr>
+			<th>Goles:</th>
+			<th><input [(ngModel)] = "jugador.goles" placeholder="{{jugador.goles}}" /></th>
+		</tr>
+		<tr>
+			<th>Asistencias:</th>
+			<th><input [(ngModel)] = "jugador.asistencias" placeholder="{{jugador.asistencias}}" /></th>
+		</tr>
+		<tr>
+			<th>Tarjetas Amarillas:</th>
+			<th><input [(ngModel)] = "jugador.tarjetasAmarillas" placeholder="{{jugador.tarjetasAmarillas}}" /></th>
+		</tr>
+		<tr>
+			<th>Tarjetas Rojas:</th>
+			<th><input [(ngModel)] = "jugador.tarjetasRojas" placeholder="{{jugador.tarjetasRojas}}" /></th>
+		</tr>
+		<tr>
+			<th><button (click)="goBack()">Volver</button></th>
+			<th><button (click)="update()">Guardar</button>
+			</th>
+		</tr>
+	</table>
